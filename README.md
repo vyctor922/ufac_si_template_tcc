@@ -73,4 +73,10 @@ Para contribuir com código-fonte do modelo:
 #### 2024/01/30 - v1.1.0
 
 - Ajuste nas citações para refletir as mudanças introduzidas pela norma NBR 10520:2023 por meio do documento abntex2-alf.bst.
-- Ajustes de espaçamentos, comentários, formatação do código e exemplos no texto.
+- Ajustes para adaptar o modelo às normas NBR vigentes e ao modelo comum dos TCC's de S.I. da UFAC.
+- Adição e modificação de conteúdos no README e comentários.
+- Correção de links quebrados e remoção de recursos obsoletos.
+- Introdução de novos recursos, dados para referências e exemplos no texto.
+- Remoção de arquivos e logs desnecessários.
+- Adição de arquivo .gitignore para ignorar arquivos desnecessários.
+- Formatação do código.
