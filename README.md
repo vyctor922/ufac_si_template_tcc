@@ -2,7 +2,7 @@
 
 Este projeto consiste em uma personalização da classe abnTeX2 para atender aos requisitos dos Trabalhos de Conclusão de Curso (TCC) do curso de Sistemas de Informação da Universidade Federal do Acre (UFAC).
 
-O pacote abntex2-UFAC fornece o arquivo abntex2-UFAC.sty, projetado para ser integrado com o pacote abnTex2, amplamente utilizada no LaTeX, junto com o arquivo abntex2-alf.bst, com alterações da biblioteca abnTex2 para atender requisitos da ABNT modificados em 2023.
+O pacote abntex2-UFAC fornece o arquivo abntex2-UFAC.sty, projetado para ser integrado com o pacote abnTex2, amplamente utilizado no LaTeX, junto ao arquivo abntex2-alf.bst, com alterações da biblioteca abnTex2 para atender requisitos da ABNT modificados em 2023.
 
 
 ## Compatível com as normas ABNT vigentes:
@@ -14,8 +14,8 @@ O modelo é parcialmente compatível com as seguintes normas vigentes:
 O modelo é compatível com as seguintes normas vigentes:
 
 - **ABNT NBR 6022:2018**: Informação e documentação - Artigo em publicação periódica científica - Apresentação
-- **ABNT NBR 6023:2002**:  Informação e documentação -  Referência - Elaboração`**`
-- **ABNT NBR 6024:2012**: Informação e documentação - Numeração  progressiva das seções de um documento - Apresentação
+- **ABNT NBR 6023:2002**: Informação e documentação - Referência - Elaboração`**`
+- **ABNT NBR 6024:2012**: Informação e documentação - Numeração progressiva das seções de um documento - Apresentação
 - **ABNT NBR 6027:2012**: Informação e documentação - Sumário - Apresentação
 - **ABNT NBR 6028:2003**: Informação e documentação - Resumo - Apresentação
 - **ABNT NBR 6029:2006**: Informação e documentação - Livros e folhetos - Apresentação
@@ -59,7 +59,7 @@ Para contribuir com código-fonte do modelo:
 
 ## Customizações do abnTeX2 além da nossa:
 
-- [Custumização usando BibLaTeX e abnTeX2](https://github.com/eekBR/ufpr-abntex2): Customização com adaptações consistentes quanto a norma NBR 10520:2023
+- [Custumização usando BibLaTeX e abnTeX2](https://github.com/eekBR/ufpr-abntex2): Customização com adaptações consistentes quanto à norma NBR 10520:2023
 - [Customizações conhecidas](https://github.com/abntex/abntex2/wiki/Customiza%C3%A7%C3%B5es-Conhecidas): Customizações conhecidas e recomendadas pela equipe do abnTeX2.
 
 

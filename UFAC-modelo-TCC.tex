@@ -8,7 +8,7 @@
 %% (http://abnTeX2.googlecode.com).
 %%
 %% Precisa do arquivo abntex2-UFAC.sty e abntex2-alf.bst e
-%% utilizando o compilador pdfLaTeX ou pdfTeX.
+%% utilizando o compilador pdfLaTeX.
 %%
 %%
 %% This work may be distributed and/or modified under the
@@ -56,7 +56,6 @@
 %% CONFIGURAÇÕES DE PACOTES
 
 % Pacotes básicos
-\usepackage{abntex2-UFAC}       % Personalização de ESTILO para a Universidade Federal do Acre
 \usepackage{lmodern}			% Usa a fonte Latin Modern
 \usepackage[T1]{fontenc}		% Seleção de códigos de fonte de saída
 \usepackage[utf8]{inputenc}		% Codificação do documento (conversão automática dos acentos)
@@ -79,6 +78,8 @@
 \usepackage[outdir=./]{epstopdf}
 \usepackage{epsfig}
 
+\usepackage{abntex2-UFAC}       % Personalização de ESTILO para a Universidade Federal do Acre
+
 % Pacotes adicionais
 
 % Plotagem de dados
@@ -86,6 +87,8 @@
 \pgfplotsset{compat=1.15} % resolve o problema do pacote pgfplots em múltiplas ferramentas de compilação
 
 \usepackage{xcolor}             % Controle das cores
+
+% \usepackage{microtype} 			% Para aprimoramento do arranjo visual do texto na ferramenta OVERLEAF
 
 % FUTURE-TODO: Modificar comandos relacionados as expressões latinas para serem escritas em itálico
 
@@ -108,7 +111,7 @@
 
 \local{Rio Branco}
 
-\data{\the\year} % Automatiza a inserção do ano atual, para modificação por um ano especifico troque "\the\year" pelo ano desejado
+\data{\the\year} % Automatiza a inserção do ano atual, para modificação por um ano específico troque "\the\year" pelo ano desejado
 
 \orientador{Nome Completo do (a) Orientador (a)} % Redefinido no abntex2-UFAC.sty para aceitar Instituição (default = Curso de Bacharelado em Sistemas de Informação - Universidade Federal do Acre)
 
@@ -125,7 +128,7 @@
 
 \membrobancaB[Curso de Bacharelado em Sistemas de Informação - Instituto de Ensino de Algum Lugar]{Membro (a) da Banca B} % Pacote abntex2-UFAC (default = Curso de Bacharelado em Sistemas de Informação - Universidade Federal do Acre)
 
-\databanca{\today} % Automatiza a inserção da data atual, para modificação por uma data especifica troque "\today" pela data desejada por extenso
+\databanca{\today} % Automatiza a inserção da data atual, para modificação por uma data específica troque "\today" pela data desejada por extenso
 
 % REMOVED: Comando \preambulo por ter sido inutilizado no abntex2-UFAC.sty
 % O preambulo deve conter o tipo do trabalho (tese, dissertação, trabalho de conclusão de curso e outros); objetivo (aprovação em disciplina, grau pretendido e outros); nome da instituição a que é submetido e a área de concentração
@@ -197,7 +200,7 @@
 
 %% Agradecimentos (opcional)
 \begin{agradecimentos}
-    % Insira o texto de agradecimentos aqui
+    % inserir o texto de agradecimentos aqui
     Elemento opcional, texto colocado ap\'os a dedicat\'oria em que o autor faz agradecimentos dirigidos àqueles que contribuíram de maneira relevante à elaboração do trabalho~\cite{NBR14724:2011}.
 \end{agradecimentos}
 % ---
@@ -223,7 +226,7 @@
 %% Resumo em português
 \begin{resumo}
     \noindent
-    % Insira o resumo aqui
+    % inserir o resumo aqui
     Segundo~\citeonline{NBR6028:2003}, o resumo é elemento obrigat\'orio, constitu\'ido de uma sequ\^encia de frases concisas e objetivas e n\~ao de uma simples enumera\c c\~ao de t\'opicos, não ultrapassando 500 palavras. Além disso, o resumo deve ressaltar o objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão destes itens dependem do tipo de resumo (informativo ou indicativo) e do tratamento que cada item recebe no documento original.
     \vspace{\onelineskip}
 
@@ -237,7 +240,7 @@
 \begin{resumo}[Abstract]
     \begin{otherlanguage*}{english}
         \noindent
-        % Insira o abstract aqui
+        % inserir o abstract aqui
         According to~\cite{NBR6028:2003}, the abstract is a mandatory element, consisting of a sequence of concise and objective sentences, not just a simple enumeration of topics, and should not exceed 500 words. Additionally, the abstract should highlight the objective, method, results, and conclusions of the document. The order and extent of these items depend on the type of abstract (informative or indicative) and how each item is treated in the original document.
         \vspace{\onelineskip}
 
@@ -300,7 +303,7 @@
 \textual
 
 
-% MODIFIED: Formato textual dos títulos com comando \MakeUppercase, adição de quebras de linha para início de paragráfos corretamente, troca de links quebrados, adição ou ajuste de textos de exemplo, posição da legenda e adição de fonte nas figuras e tabelas nos elementos textuais
+% MODIFIED: Formato textual dos títulos com comando \MakeUppercase, adição de quebras de linha para início de parágrafos corretamente, troca de links quebrados, adição ou ajuste de textos de exemplo, posição da legenda e adição de fonte nas figuras e tabelas nos elementos textuais
 
 % ADDED: Comando \pagestyle{simple} para remoção do cabeçalho no modelo Capítulo <N>. <Nome do Capítulo>
 \pagestyle{simple}
@@ -309,6 +312,7 @@
 
 %% Introdução
 \chapter{\MakeUppercase{Introdução}}\label{sec:introducao}
+% inserir o texto abaixo
 Apresentar uma visão geral do assunto que será abordado no trabalho, procurando fazer com que o leitor adquira uma compreensão inicial do que será tratado e fornecendo informações que o levem a perceber a sua importância.
 
 Abaixo temos um exemplo de Figura: Ver Figura~\autoref{fig:exefig}.
@@ -338,23 +342,23 @@ Alguns links interessantes para se trabalhar com a classe abn\TeX\ e \LaTeX\ em 
 \end{alineas}
 
 \section{\MakeUppercase{Problema da Pesquisa}}\label{sec:ProbPesq}
-
+% inserir o texto abaixo
 Qual a grande questão que se busca responder? Qual o problema se presente resolver? \\
-O problema é a mola propulsora de todo o trabalho de pesquisa. Após definido o tema, levanta-se uma questão para ser respondida através de uma hipótese, que será confirmada ou negada através do trabalho de pesquisa. O Problema é criado pelo próprio autor e relacionado ao tema escolhido. O autor, no caso, criará um questionamento para definir a abrangência de sua pesquisa. Não há regras para se criar um problema, mas alguns autores sugerem que ele seja expresso em forma de pergunta.
+O problema é a mola propulsora de todo o trabalho de pesquisa. Após definido o tema, levanta-se uma questão para ser respondida através de uma hipótese, que será confirmada ou negada através do trabalho de pesquisa. O problema é criado pelo próprio autor e relacionado ao tema escolhido. O autor, no caso, criará um questionamento para definir a abrangência de sua pesquisa. Não há regras para se criar um problema, mas alguns autores sugerem que ele seja expresso em forma de pergunta.
 De 1 a 2 páginas
 
 \section{\MakeUppercase{Objetivos}}\label{sec:objetivos}
-
+% inserir o texto abaixo
 O objetivo da pesquisa deve ser diretamente verificável ao final do trabalho. Um bom objetivo de pesquisa possivelmente irá demonstrar que alguma hipótese sendo testada é ou não verdadeira.
 
 % MODIFIED: Níveis de seções de objetivos gerais e específicos - caso específico de TCC II do curso de Sistemas de Informação
 
 \subsection{Objetivo Geral}\label{sec:ObjGeral}
-
+% inserir o texto abaixo
 Qual o objetivo maior do trabalho?
 
 \subsection{Objetivos Específicos}\label{sec:ObjEspec}
-
+% inserir o texto abaixo
 Os objetivos específicos do trabalho devem ser expressos na forma de uma condição não trivial cujo sucesso possa vir a ser verificado ao final do trabalho. Um objetivo bem expresso em geral terá verbos como “demonstrar”, “provar”, “melhorar” (de acordo com alguma métrica definida), etc.
 
 Deve-se tomar cuidado com certos verbos que determinam objetivos cuja verificação é trivial e, portanto, inadequada. Entre eles pode-se citar “propor”, “estudar”, “apresentar”, etc. Se o objetivo do trabalho é propor algo, basta que a coisa seja proposta para que o objetivo seja atingido e, portanto, essa forma é trivial e inadequada, pois a definição do objetivo não menciona a qualidade daquilo que será proposto.
@@ -366,7 +370,7 @@ Se o objetivo do trabalho consiste em apresentar algo, novamente ele é trivial 
 Insira os objetivos específicos no formato de tópicos.
 
 \section{\MakeUppercase{Justificativa da Pesquisa}}\label{sec:Justificativa}
-
+% inserir o texto abaixo
 A proposta, o estudo e a apresentação podem ser justificáveis como objetivo de pesquisa desde que o objeto da proposta, estudo ou da apresentação seja algo original~\cite{wazlawick2009}.
 
 A Justificativa num projeto de pesquisa, como o próprio nome indica, é o convencimento de que o trabalho de pesquisa é fundamental de ser efetivado. O tema escolhido pelo pesquisador e a Hipótese levantada são de suma importância, para a sociedade ou para alguns indivíduos, de ser comprovada.
@@ -376,7 +380,7 @@ Por que será feita a pesquisa sobre este assunto? Aqui a importância do tema. 
 
 
 \section{\MakeUppercase{Metodologia}}\label{sec:Metodologia}
-
+% inserir o texto abaixo
 Como será realizado a monografia? Pesquisa bibliográfica, estudo de caso, levantamento (ver manual sobre metodologia no grupo) \\
 Detalhar se tem instrumentos de coleta de dados (questionário, formulário, entrevista, observação), quem é a população e a amostra. Como serão tabulados os dados.
 
@@ -388,13 +392,13 @@ Se for desenvolvimento de sistemas ou de aplicações falar quais ferramentas se
 
 
 \section{\MakeUppercase{Organização}}\label{sec:Organizacao}
-
+% inserir o texto abaixo
 O que tem em cada um dos capítulos seguintes (Detalhar a estrutura de capítulos que será adotada, partindo desde o 1º capítulo da monografia até as referências).
 %% ---
 
 %% Referencial teórico ou Fundamentação teórica
 \chapter{\MakeUppercase{Referencial Teórico}}\label{sec:RefTeorico}
-
+% Insirir texto abaixo
 Parte teórica a monografia: qual o assunto que dá o embasamento para a monografia? Quais os principais temas que precisam ser abordados? Dividir os temas em subtítulos.
 
 As referências dos documentos consultados para a elaboração do Projeto é um item obrigatório. Nela constam normalmente os documentos e qualquer fonte de informações consultadas no Levantamento de Literatura.
@@ -447,13 +451,13 @@ Não termine um capítulo ou seção com uma figura ou tabela. Insira um texto a
 %% Capítulo ou seção de trabalhos relacionados (opcional)
 \section{\MakeUppercase{Trabalhos Relacionados}}\label{sec:TrabRel}
 % \chapter{\MakeUppercase{Trabalhos Relacionados}}\label{sec:TrabRel}
-% inserir texto abaixo
+% inserir o texto abaixo
 
 %% ---
 
 %% Capítulo de desenvolvimento, materiais e métodos ou estudo de caso (nome a escolha do aluno)
 \chapter{\MakeUppercase{Materiais e Métodos}}\label{sec:metodos}
-% inserir texto abaixo
+% inserir o texto abaixo
 
 % ADDED: Exemplo de quadro implementado
 Exemplo de Quadro (dados qualitativos): ver o quadro \autoref{tab:exequa}.
@@ -462,28 +466,28 @@ Exemplo de Quadro (dados qualitativos): ver o quadro \autoref{tab:exequa}.
     \centering
     \caption{Comparativo de trabalhos relacionados}
     \begin{tabular}{|p{2.1cm}|l|p{4.1cm}|p{2.1cm}|p{3.1cm}|} \hline
-        % titulos
+        % Títulos
         \textbf{Trabalho}
         & \textbf{SGBD}
         & \textbf{Objetivo}
         & \textbf{Abordagem}
         & \textbf{Avaliação de custo}
         \\ \hline
-        % coluna 1
+        % Coluna 1
         \cite{Alagiannis:2010}
         & PostgreSQL
         & Sugestão de índices e particionamento
         & \emph{Offline} e \emph{online}
         & Uso de componente \emph{what-if}, acessando otimizador do SGBD para avaliar custo da consulta com \emph{cache} dos resultados
         \\ \hline
-        % coluna 2
+        % Coluna 2
         \cite{Agrawal:2004}
         & SQL Server
         & Sugestão de índices, particionamento e materialização de dados
         & \emph{Offline}
         & Uso de componente \emph{what-if}, acessando otimizador do SGBD para avaliar custo da consulta
         \\ \hline
-        % coluna 3
+        % Coluna 3
         \cite{Zilio:2004}
         & DB2
         & Sugestão de índices, particionamento, materialização de dados e agrupamento multidimensional
@@ -500,13 +504,13 @@ Não termine um capítulo ou seção com uma figura ou tabela. Insira um texto a
 
 %% Capítulo de Resultados
 \chapter{\MakeUppercase{Resultados}}\label{sec:resultados}
-% inserir texto abaixo
+% inserir o texto abaixo
 
 % ---
 
 %% Cronograma
 \chapter{\MakeUppercase{Cronograma}}\label{sec:cronograma}
-
+% inserir o texto abaixo
 Sempre insira texto entre as tabelas e figuras para que as mesmas não fiquem soltas na dissertação.
 
 \begin{table}[htbp]
