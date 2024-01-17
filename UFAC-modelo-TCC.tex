@@ -90,6 +90,8 @@
 
 \usepackage{microtype} 			% Para aprimoramento do arranjo visual do texto na ferramenta OVERLEAF
 
+\usepackage{amsmath}            % Pacote para controle de equações matemáticas
+
 % FUTURE-TODO: Modificar comandos relacionados as expressões latinas para serem escritas em itálico
 
 % MODIFIED: Termos latinos para serem escritos em itálico
@@ -456,6 +458,14 @@ Não termine um capítulo ou seção com uma figura ou tabela. Insira um texto a
 % \chapter{Trabalhos Relacionados}\label{sec:TrabRel}
 % inserir o texto abaixo
 
+% ADDED: Exemplo de equação
+Para explicação de cálculos usando equações como
+
+\begin{equation}\tag{1} % tag serve para nomear a equação com um número específico, numere as equações na ordem que aparecem no texto
+    PA = \frac{\sum_{i} n_{ii}}{\sum_{i} t_{i}} + \sum_{n=1}^{\infty} 2^{-n}
+\end{equation}
+
+a estrutura \texttt{equation} serve de forma exemplar.
 %% ---
 
 %% Capítulo de desenvolvimento, materiais e métodos ou estudo de caso (nome a escolha do aluno)
