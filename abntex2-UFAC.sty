@@ -69,9 +69,11 @@
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 % ---
 
+% MODIFIED: Formato textual dos títulos com comando \MakeUppercase
+
 %% Ajusta o formato textual dos títulos das seções e subseções no sumário
-\renewcommand{\cftchapterfont}{\bfseries}
-\renewcommand{\cftsectionfont}{\bfseries}
+\renewcommand{\cftchapterfont}{\bfseries\MakeUppercase} % Remover \MakeUppercase caso seja demandado títulos das seções em minúsculo
+\renewcommand{\cftsectionfont}{\bfseries\MakeUppercase} % Remover \MakeUppercase caso seja demandado títulos das subseções em minúsculo
 \renewcommand{\cftsubsectionfont}{\bfseries}
 \renewcommand{\cftsubsubsectionfont}{\bfseries}
 \renewcommand{\cftsubsubsubsectionfont}{\bfseries}
