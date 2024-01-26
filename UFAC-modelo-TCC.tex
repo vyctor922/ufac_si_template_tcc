@@ -78,6 +78,8 @@
 \usepackage[outdir=./]{epstopdf}
 \usepackage{epsfig}
 
+% \usepackage{svg}                % Leitura de figuras .svg na ferramenta OVERLEAF
+
 \usepackage{abntex2-UFAC}       % Personalização de ESTILO para a Universidade Federal do Acre
 
 % Pacotes adicionais
@@ -298,6 +300,9 @@
 \cleardoublepage
 % ---
 
+%% Inicializado contadores
+\newcounter{equationCont} % Contador de equações
+% ---
 
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
@@ -345,6 +350,18 @@ Alguns links interessantes para se trabalhar com a classe abn\TeX\ e \LaTeX\ em 
     \item Exemplo de Tabela IBGE na Tabela 2 no \autoref{sec:cronograma}
     \item Exemplo de Quadro no Capítulo \ref{sec:metodos}
 \end{alineas}
+
+% Metodologia qualquer em ordem: ver Figura 2.
+
+% \begin{figure}[!ht]
+%     \centering
+%     \textbf{\caption{Metodologia qualquer em ordem}}
+%     \includesvg[width=1\linewidth]{figuras/exemethodology.svg}
+%     \label{fig:metodologia}
+%     \fonte{Autor próprio}
+% \end{figure}
+
+% Acima o exemplo do uso de uma imagem vetorial em formato .svg. Para a utilização de imagens vetoriais, o pacote \texttt{svg} deve ser importado e a estrutura \texttt{figure} com o comando \verb|\includesvg[width=1\linewidth]{...}| deve ser utilizado. Para a utilização de imagens em formato .eps, o pacote \texttt{epsfig} deve ser importado e a estrutura \texttt{figure} com o comando \verb|\includegraphics[width=1\linewidth]{...}| deve ser utilizado. Para a utilização de imagens em formato .png ou .jpg, o pacote \texttt{graphicx} deve ser importado e a estrutura \texttt{figure} com o comando \verb|\includegraphics[width=1\linewidth]{...}| deve ser utilizado. Lembrando que o comando \verb|\textbf{\caption{...}}| deve ser usado acima de do comando de inclusão da imagem dentro da estrutura \texttt{figure}.
 
 \section{Problema da Pesquisa}\label{sec:ProbPesq}
 % inserir o texto abaixo
@@ -459,13 +476,13 @@ Não termine um capítulo ou seção com uma figura ou tabela. Insira um texto a
 % inserir o texto abaixo
 
 % ADDED: Exemplo de equação
-Para explicação de cálculos usando equações como
+Para a explicação de cálculos utilizando equações como
 
-\begin{equation}\tag{1} % tag serve para nomear a equação com um número específico, numere as equações na ordem que aparecem no texto
+\begin{equation}\stepcounter{equationCont}\tag{\theequationCont}
     PA = \frac{\sum_{i} n_{ii}}{\sum_{i} t_{i}} + \sum_{n=1}^{\infty} 2^{-n}
 \end{equation}
 
-a estrutura \texttt{equation} serve de forma exemplar.
+a estrutura \texttt{equation} é utilizada de forma exemplar. O comando \verb|\tag{\theequationCont}| serve para nomear com um número a equação na ordem em que aparecem no texto, sendo \verb|\theequationCont| incrementado com o comando \verb|\stepcounter{equationCont}|.
 %% ---
 
 %% Capítulo de desenvolvimento, materiais e métodos ou estudo de caso (nome a escolha do aluno)
